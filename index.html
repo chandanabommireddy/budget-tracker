@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Budget Tracker</h1>
+
+    <label for="salary">Enter your Salary:</label>
+    <input type="number" id="salary" placeholder="Enter monthly salary" min="0" />
+
+    <div class="add-transaction">
+      <label>Add Transaction</label>
+      <div class="flex">
+        <select id="type">
+          <option value="expense">Expense</option>
+          <option value="income">Income</option>
+        </select>
+        <select id="category">
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Bills">Bills</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+      <input type="number" id="amount" placeholder="Amount" min="0" />
+      <button id="addBtn">Add Transaction</button>
+    </div>
+
+    <div class="summary" id="remaining">
+      Remaining Budget: ₹0.00
+    </div>
+
+    <div class="transactions">
+      <h3>Transactions</h3>
+      <div id="transactionsList">No transactions yet.</div>
+    </div>
+
+    <canvas id="pieChart"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
